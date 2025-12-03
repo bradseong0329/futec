@@ -126,18 +126,38 @@ function initMegaMenu() {
     const trigger = item.querySelector(".main-nav__link");
     if (!trigger) return;
 
+
+
+
     const menu = item.getAttribute("data-menu");
     if (!menu) return;
 
+    // 마우스를 올리면 기존처럼 메가 메뉴 오픈
     item.addEventListener("mouseenter", () => {
       openMega(menu, item, mega, divider);
     });
 
-    // keep open when moving to panel
+     // 키보드 포커스로 진입 시에도 오픈
     item.addEventListener("focusin", () => {
       openMega(menu, item, mega, divider);
     });
-  });
+
+    // 주 메뉴(텍스트/화살표 포함)를 클릭하면 토글
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const isActiveItem = item.classList.contains("active");
+      const isMegaOpen = mega.classList.contains("active");
+
+      if (isMegaOpen && isActiveItem) {
+        // 이미 이 메뉴의 서브메뉴가 열린 상태에서 다시 클릭 → 닫기
+        closeMega(mega, divider);
+      } else {
+        // 닫혀 있거나 다른 메뉴가 열린 상태에서 클릭 → 이 메뉴 열기
+        openMega(menu, item, mega, divider);
+      }
+     });
+   });
 
   header.addEventListener("mouseleave", (e) => {
     const toElement = e.relatedTarget;
