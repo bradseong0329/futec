@@ -785,11 +785,11 @@ a:focus {
   margin: 0;
   padding: 0;
   font-size: 0.8rem;
-  color: var(--color-muted);
+  color: #06397b; /* 수정: breadcrumbs 전체 텍스트 컬러 */
 }
 
 .breadcrumb a {
-  color: var(--color-muted);
+  color: #06397b; /* 수정: 링크 컬러도 동일 색상 */
   text-decoration: none;
 }
 
