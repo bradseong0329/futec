@@ -1,627 +1,698 @@
 <!-- partials/header.html -->
-<div class="site-header-wrapper">
-  <header class="site-header">
-    <div
-      class="site-header__inner"
-      style="
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 32px;
-        display: flex;
-        align-items: center;
-      "
-    >
-
-      <!-- 로고 영역: 타원형 테두리 + 로고 이미지 -->
-      <a
-        href="index.html"
-        class="site-header__logo"
-        style="display: flex; align-items: center; margin-right: 0.6rem;"
-      >
-        <div class="site-header__logo-img-wrapper">
-          <img
-            src="assets/img/logo.png"
-            alt="Futec Solutions 로고"
-          />
-        </div>
-      </a>
-
-      <!-- 모바일 토글 버튼 (우측) -->
-      <button class="site-header__mobile-toggle" aria-label="Toggle navigation">
-        <span class="lang-ko">메뉴</span>
-        <span class="lang-en">Menu</span>
-        <span class="hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <div class="site-header__logo-img-wrapper">
+        <img
+          src="assets/img/logo-futec.svg"
+          alt="Futec Solutions Inc."
+          class="site-header__logo-img"
+        />
+      </div>
+      <div class="site-header__logo-text">
+        <span class="site-header__logo-title">FUTEC SOLUTIONS</span>
+        <span class="site-header__logo-sub">
+          <span class="lang-ko">AI 영상분석 &amp; IT 인프라 전문 기업</span>
+          <span class="lang-en">AI Video Analytics &amp; IT Infrastructure</span>
         </span>
-      </button>
+      </div>
+    </a>
 
-      <!-- 데스크톱 GNB -->
-      <nav class="main-nav" aria-label="Primary navigation">
-        <ul
-          class="main-nav__list"
-          style="
-            display: flex;
-            align-items: center;
-            gap: 0.6rem; /* 주 메뉴 간격: 조금 더 좁게 */
-          "
-        >
-          <!-- 왼쪽 주 메뉴 5개 -->
-          <li class="main-nav__item has-mega" data-menu="products">
-            <button class="main-nav__link">
+    <div class="site-header__top">
+      <div class="site-header__top-links">
+        <a href="partner-portal.html">
+          <span class="lang-ko">파트너 포털</span>
+          <span class="lang-en">Partner Portal</span>
+        </a>
+        <a href="contact.html">
+          <span class="lang-ko">연락처</span>
+          <span class="lang-en">Contact</span>
+        </a>
+      </div>
+
+      <div class="site-header__actions">
+        <a href="partner-portal.html" class="partner-portal-btn">
+          <span class="lang-ko">파트너 포털</span>
+          <span class="lang-en">Partner Portal</span>
+        </a>
+
+        <div class="site-header__lang">
+          <button class="lang-toggle-btn" type="button">
+            <span class="lang-toggle-label">KOR</span>
+            <span class="nav-arrow nav-arrow--down">▼</span>
+            <span class="nav-arrow nav-arrow--up">▲</span>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" data-lang-select="ko" class="is-active">KOR</button>
+            <button type="button" data-lang-select="en">ENG</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-header__nav-wrapper">
+    <div class="site-header__nav">
+      <ul class="main-nav">
+        <!-- 제품 -->
+        <li class="main-nav__item main-nav__item--products">
+          <button
+            class="main-nav__link"
+            type="button"
+            data-menu="products"
+            aria-expanded="false"
+          >
+            <span>
               <span class="lang-ko">제품</span>
               <span class="lang-en">Products</span>
-              <span class="nav-arrow nav-arrow--down">▼</span>
-              <span class="nav-arrow nav-arrow--up">▲</span>
-            </button>
-          </li>
-          <li class="main-nav__item has-mega" data-menu="industry">
-            <button class="main-nav__link">
-              <span class="lang-ko">산업</span>
-              <span class="lang-en">Industry</span>
-              <span class="nav-arrow nav-arrow--down">▼</span>
-              <span class="nav-arrow nav-arrow--up">▲</span>
-            </button>
-          </li>
-          <li class="main-nav__item has-mega" data-menu="resources">
-            <button class="main-nav__link">
+            </span>
+            <span class="nav-arrow nav-arrow--down">▼</span>
+            <span class="nav-arrow nav-arrow--up">▲</span>
+          </button>
+          <div class="mega-menu" data-panel="products">
+            <div class="mega-menu__row">
+              <div>
+                <div class="mega-menu__col-title">
+                  <span class="lang-ko">제품 그룹</span>
+                  <span class="lang-en">Product Groups</span>
+                </div>
+
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">AI 영상분석 &amp; 어플라이언스</span>
+                    <span class="lang-en">AI Video Analytics &amp; Appliances</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      글로벌 VMS와 연동 가능한 AI 영상분석 소프트웨어 및 어플라이언스
+                      제품군입니다.
+                    </span>
+                    <span class="lang-en">
+                      AI video analytics software and appliances designed to integrate
+                      with leading VMS platforms.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="coming-soon.html">
+                        <span class="lang-ko">AI 영상분석 소프트웨어</span>
+                        <span class="lang-en">AI Video Analytics Software</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="coming-soon.html">
+                        <span class="lang-ko">AI 영상분석 어플라이언스</span>
+                        <span class="lang-en">AI Video Analytics Appliances</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">IT 인프라 &amp; 네트워크</span>
+                    <span class="lang-en">IT Infrastructure &amp; Network</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      영상감시와 AI 분석에 최적화된 네트워크, 서버/워크스테이션, 스토리지
+                      기반 인프라 솔루션입니다.
+                    </span>
+                    <span class="lang-en">
+                      Infrastructure solutions optimized for video surveillance and AI
+                      analytics, including networking, servers/workstations, and
+                      storage.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="coming-soon.html">
+                        <span class="lang-ko">네트워킹</span>
+                        <span class="lang-en">Networking</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="coming-soon.html">
+                        <span class="lang-ko">서버/워크스테이션</span>
+                        <span class="lang-en">Servers &amp; Workstations</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="coming-soon.html">
+                        <span class="lang-ko">스토리지</span>
+                        <span class="lang-en">Storage</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mega-menu__aside">
+                <div class="mega-menu__tag">
+                  <span class="lang-ko">Coming Soon</span>
+                  <span class="lang-en">Coming Soon</span>
+                </div>
+                <p>
+                  <span class="lang-ko">
+                    글로벌 AI 영상분석 및 인프라 벤더들과의 파트너십을 통해, 2026년부터
+                    정식 출시를 목표로 준비 중입니다.
+                  </span>
+                  <span class="lang-en">
+                    We are preparing for formal launch starting in 2026 through
+                    partnerships with global AI analytics and infrastructure vendors.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 산업/고객 -->
+        <li class="main-nav__item main-nav__item--industry">
+          <button
+            class="main-nav__link"
+            type="button"
+            data-menu="industry"
+            aria-expanded="false"
+          >
+            <span>
+              <span class="lang-ko">산업/고객</span>
+              <span class="lang-en">Industries</span>
+            </span>
+            <span class="nav-arrow nav-arrow--down">▼</span>
+            <span class="nav-arrow nav-arrow--up">▲</span>
+          </button>
+          <div class="mega-menu" data-panel="industry">
+            <div class="mega-menu__row">
+              <div>
+                <div class="mega-menu__col-title">
+                  <span class="lang-ko">핵심 산업</span>
+                  <span class="lang-en">Core Verticals</span>
+                </div>
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">리테일 &amp; 상업시설</span>
+                    <span class="lang-en">Retail &amp; Commercial</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      매장/쇼핑몰 내 고객 행동 분석, 매출 연계 분석, 보안/안전 모니터링을
+                      위한 AI 영상분석을 제공합니다.
+                    </span>
+                    <span class="lang-en">
+                      AI analytics for customer behavior, sales correlation, and
+                      security/safety monitoring in stores and malls.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="industry.html">
+                        <span class="lang-ko">리테일 · 쇼핑몰</span>
+                        <span class="lang-en">Retail &amp; Shopping Malls</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="industry.html">
+                        <span class="lang-ko">브랜드 플래그십 스토어</span>
+                        <span class="lang-en">Brand Flagship Stores</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">캠퍼스 &amp; 오피스</span>
+                    <span class="lang-en">Campus &amp; Office</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      연구소, 본사, 사옥, 데이터센터 등에서 출입 보안과 근무환경 모니터링을
+                      지원합니다.
+                    </span>
+                    <span class="lang-en">
+                      Supports access security and workplace monitoring for research
+                      labs, headquarters, campuses, and data centers.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="industry.html">
+                        <span class="lang-ko">기업 캠퍼스</span>
+                        <span class="lang-en">Corporate Campuses</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="industry.html">
+                        <span class="lang-ko">연구소 &amp; 데이터센터</span>
+                        <span class="lang-en">Labs &amp; Data Centers</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mega-menu__aside">
+                <div class="mega-menu__tag">
+                  <span class="lang-ko">Use Case</span>
+                  <span class="lang-en">Use Cases</span>
+                </div>
+                <p>
+                  <span class="lang-ko">
+                    산업별로 다른 보안/운영 요구사항을 반영하여, 리테일, 캠퍼스, 제조, 공공
+                    등 다양한 고객 프로젝트 경험을 바탕으로 제안합니다.
+                  </span>
+                  <span class="lang-en">
+                    We tailor our proposals to the unique security and operational
+                    needs of each vertical, leveraging experience in retail, campus,
+                    manufacturing, and public sector projects.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 리소스 -->
+        <li class="main-nav__item main-nav__item--resources">
+          <button
+            class="main-nav__link"
+            type="button"
+            data-menu="resources"
+            aria-expanded="false"
+          >
+            <span>
               <span class="lang-ko">리소스</span>
               <span class="lang-en">Resources</span>
-              <span class="nav-arrow nav-arrow--down">▼</span>
-              <span class="nav-arrow nav-arrow--up">▲</span>
-            </button>
-          </li>
-          <li class="main-nav__item has-mega" data-menu="partners">
-            <button class="main-nav__link">
-              <span class="lang-ko">파트너</span>
-              <span class="lang-en">Partners</span>
-              <span class="nav-arrow nav-arrow--down">▼</span>
-              <span class="nav-arrow nav-arrow--up">▲</span>
-            </button>
-          </li>
-          <li class="main-nav__item has-mega" data-menu="company">
-            <button class="main-nav__link">
+            </span>
+            <span class="nav-arrow nav-arrow--down">▼</span>
+            <span class="nav-arrow nav-arrow--up">▲</span>
+          </button>
+          <div class="mega-menu" data-panel="resources">
+            <div class="mega-menu__row">
+              <div>
+                <div class="mega-menu__col-title">
+                  <span class="lang-ko">자료 &amp; 가이드</span>
+                  <span class="lang-en">Resources &amp; Guides</span>
+                </div>
+
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">FAQ &amp; 자료실</span>
+                    <span class="lang-en">FAQ &amp; Documents</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      자주 묻는 질문과 제품/솔루션 관련 문서를 한 곳에서 확인하실 수
+                      있습니다.
+                    </span>
+                    <span class="lang-en">
+                      Find frequently asked questions and product/solution documents in
+                      one place.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="resources.html">
+                        <span class="lang-ko">FAQ / 자주 묻는 질문</span>
+                        <span class="lang-en">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="resources.html">
+                        <span class="lang-ko">자료실</span>
+                        <span class="lang-en">Downloads</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">교육 &amp; 웨비나</span>
+                    <span class="lang-en">Training &amp; Webinars</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      향후 파트너 및 고객을 위한 교육, 웨비나, 온보딩 프로그램을 제공할
+                      예정입니다.
+                    </span>
+                    <span class="lang-en">
+                      Upcoming trainings, webinars, and onboarding programs for partners
+                      and customers.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="resources.html">
+                        <span class="lang-ko">교육 및 웨비나</span>
+                        <span class="lang-en">Trainings &amp; Webinars</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mega-menu__aside">
+                <div class="mega-menu__tag">
+                  <span class="lang-ko">Partner Ready</span>
+                  <span class="lang-en">Partner Ready</span>
+                </div>
+                <p>
+                  <span class="lang-ko">
+                    글로벌 VMS 및 AI 벤더와 협업하는 파트너사를 위한 기술자료, 세일즈
+                    지원자료를 순차적으로 공개할 예정입니다.
+                  </span>
+                  <span class="lang-en">
+                    Technical and sales resources will be made available for partners
+                    working with global VMS and AI vendors.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 회사 -->
+        <li class="main-nav__item main-nav__item--company">
+          <button
+            class="main-nav__link"
+            type="button"
+            data-menu="company"
+            aria-expanded="false"
+          >
+            <span>
               <span class="lang-ko">회사</span>
               <span class="lang-en">Company</span>
-              <span class="nav-arrow nav-arrow--down">▼</span>
-              <span class="nav-arrow nav-arrow--up">▲</span>
-            </button>
-          </li>
+            </span>
+            <span class="nav-arrow nav-arrow--down">▼</span>
+            <span class="nav-arrow nav-arrow--up">▲</span>
+          </button>
+          <div class="mega-menu" data-panel="company">
+            <div class="mega-menu__row">
+              <div>
+                <div class="mega-menu__col-title">
+                  <span class="lang-ko">회사 정보</span>
+                  <span class="lang-en">Company</span>
+                </div>
 
-          <!-- 오른쪽 정렬 그룹: 파트너 포털 / 언어 / 검색 -->
-          <li
-            class="main-nav__item main-nav__item--portal"
-            style="margin-left: auto;"
-          >
-            <a href="partner-portal.html" class="partner-portal-btn">
-              <span class="lang-ko">파트너 포털</span>
-              <span class="lang-en">Partner Portal</span>
-            </a>
-          </li>
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">회사 개요 &amp; 비전</span>
+                    <span class="lang-en">Company Overview &amp; Vision</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      글로벌 VMS와 AI 영상분석을 중심으로, 물리 보안과 운영 효율을
+                      동시에 높이는 파트너가 되겠습니다.
+                    </span>
+                    <span class="lang-en">
+                      We aim to be your partner in enhancing both physical security and
+                      operational efficiency through global VMS and AI analytics.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="vision.html">
+                        <span class="lang-ko">비전</span>
+                        <span class="lang-en">Vision</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="greeting.html">
+                        <span class="lang-ko">인사말</span>
+                        <span class="lang-en">Greeting</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-          <li class="main-nav__item has-lang">
-            <button class="main-nav__link lang-toggle-btn" type="button">
-              <span class="lang-toggle-label">KOR</span>
-              <span class="nav-arrow nav-arrow--down">▼</span>
-              <span class="nav-arrow nav-arrow--up">▲</span>
-            </button>
-            <div class="lang-dropdown">
-              <button type="button" data-lang-select="ko">KOR</button>
-              <button type="button" data-lang-select="en">ENG</button>
+                <div class="mega-menu__section">
+                  <h4 class="mega-menu__section-title">
+                    <span class="lang-ko">연락처 &amp; 문의</span>
+                    <span class="lang-en">Contact &amp; Inquiry</span>
+                  </h4>
+                  <p class="mega-menu__description">
+                    <span class="lang-ko">
+                      제품/솔루션, 파트너십, 프로젝트 협업 관련 문의를 언제든지 환영합니다.
+                    </span>
+                    <span class="lang-en">
+                      We welcome inquiries regarding products, partnerships, and project
+                      collaboration.
+                    </span>
+                  </p>
+                  <ul class="mega-menu__list">
+                    <li>
+                      <a href="contact.html">
+                        <span class="lang-ko">연락처</span>
+                        <span class="lang-en">Contact</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="inquiry.html">
+                        <span class="lang-ko">문의</span>
+                        <span class="lang-en">Inquiry</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="events.html">
+                        <span class="lang-ko">이벤트</span>
+                        <span class="lang-en">Events</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mega-menu__aside">
+                <div class="mega-menu__tag">
+                  <span class="lang-ko">About Futec</span>
+                  <span class="lang-en">About Futec</span>
+                </div>
+                <p>
+                  <span class="lang-ko">
+                    퓨텍솔루션즈는 AI 영상분석, 글로벌 VMS, IT 인프라 전문가들이 함께 만드는
+                    보안/운영 혁신 파트너입니다.
+                  </span>
+                  <span class="lang-en">
+                    Futec Solutions is a team of experts in AI analytics, global VMS,
+                    and IT infrastructure dedicated to transforming security and
+                    operations.
+                  </span>
+                </p>
+              </div>
             </div>
-          </li>
+          </div>
+        </li>
 
-          <li class="main-nav__item has-search" data-menu="search">
-            <button
-              class="main-nav__link search-toggle-btn"
-              type="button"
-              aria-label="Open search"
-            >
-              🔍
-            </button>
-          </li>
-        </ul>
-      </nav>
+        <!-- 파트너 -->
+        <li class="main-nav__item main-nav__item--partners">
+          <a href="partners.html" class="main-nav__link">
+            <span>
+              <span class="lang-ko">파트너</span>
+              <span class="lang-en">Partners</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="site-header__search">
+        <input
+          type="text"
+          class="site-header__search-input"
+          placeholder="Search..."
+          readonly
+        />
+        <button class="site-header__search-button" type="button" disabled>
+          <span class="lang-ko">검색</span>
+          <span class="lang-en">Search</span>
+        </button>
+      </div>
+
+      <div class="site-header__mobile-toggle">
+        <button type="button" class="mobile-menu-toggle" data-mobile-toggle>
+          <span class="lang-ko">메뉴</span>
+          <span class="lang-en">Menu</span>
+          <span class="nav-arrow nav-arrow--down">▼</span>
+        </button>
+      </div>
     </div>
+  </div>
 
-    <!-- 헤더 아래 메가 메뉴 구분선 -->
-    <div class="mega-divider"></div>
-
-    <!-- 데스크톱 메가 메뉴 -->
-    <div class="mega-menu" id="mega-menu">
-      <div class="mega-menu__inner">
-        <!-- Products panel -->
-        <div class="mega-menu__panel" data-menu-panel="products">
-          <div class="mega-menu__title">
-            <span class="lang-ko">제품</span>
-            <span class="lang-en">Products</span>
-          </div>
-          <div class="mega-menu__subtitle">
-            <span class="lang-ko">
-              AI 영상분석과 IT 인프라를 결합한 통합 솔루션 포트폴리오를 준비 중입니다.
+  <!-- 모바일 내비게이션 -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__inner">
+      <ul class="mobile-nav__list">
+        <!-- 제품 -->
+        <li class="mobile-nav__item">
+          <button
+            class="mobile-nav__toggle"
+            type="button"
+            data-mobile-menu="products"
+            aria-expanded="false"
+          >
+            <span>
+              <span class="lang-ko">제품</span>
+              <span class="lang-en">Products</span>
             </span>
-            <span class="lang-en">
-              We are preparing a combined portfolio of AI video analytics and IT
-              infrastructure solutions.
-            </span>
-          </div>
-          <div class="mega-products-layout">
-            <div>
-              <div class="mega-products-group-title">
-                <span class="lang-ko">AI 영상분석 솔루션</span>
-                <span class="lang-en">AI Video Analytics Solutions</span>
-              </div>
-              <ul class="mega-products-list">
-                <li>
-                  <a href="coming-soon.html">
-                    <span class="lang-ko">AI 영상분석 소프트웨어</span>
-                    <span class="lang-en">AI Video Analytics Software</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="coming-soon.html">
-                    <span class="lang-ko">AI 영상분석 어플라이언스</span>
-                    <span class="lang-en">AI Video Analytics Appliances</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div class="mega-products-group-title">
-                <span class="lang-ko">IT 인프라 솔루션</span>
-                <span class="lang-en">IT Infrastructure Solutions</span>
-              </div>
-              <ul class="mega-products-list">
-                <li>
-                  <a href="coming-soon.html">
-                    <span class="lang-ko">네트워킹</span>
-                    <span class="lang-en">Networking</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="coming-soon.html">
-                    <span class="lang-ko">서버/워크스테이션</span>
-                    <span class="lang-en">Servers &amp; Workstations</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="coming-soon.html">
-                    <span class="lang-ko">스토리지</span>
-                    <span class="lang-en">Storage</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Industry panel -->
-        <div class="mega-menu__panel" data-menu-panel="industry">
-          <div class="mega-menu__title">
-            <span class="lang-ko">산업</span>
-            <span class="lang-en">Industry</span>
-          </div>
-          <div class="mega-menu__subtitle">
-            <span class="lang-ko">
-              다양한 산업군에서 AI 영상분석을 활용한 물리 보안과 운영 효율화를
-              지원합니다.
-            </span>
-            <span class="lang-en">
-              We support physical security and operational efficiency across multiple
-              industries with AI video analytics.
-            </span>
-          </div>
-          <div class="mega-industry-grid">
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">리테일(매장)</span>
-                <span class="lang-en">Retail</span>
+            <span class="mobile-arrow">▼</span>
+          </button>
+          <div class="mobile-submenu" data-mobile-panel="products">
+            <div class="mobile-submenu-inner">
+              <a href="coming-soon.html">
+                <span class="lang-ko">AI 영상분석 소프트웨어</span>
+                <span class="lang-en">AI Video Analytics Software</span>
+              </a>
+              <a href="coming-soon.html">
+                <span class="lang-ko">AI 영상분석 어플라이언스</span>
+                <span class="lang-en">AI Video Analytics Appliances</span>
+              </a>
+              <a href="coming-soon.html">
+                <span class="lang-ko">네트워킹</span>
+                <span class="lang-en">Networking</span>
+              </a>
+              <a href="coming-soon.html">
+                <span class="lang-ko">서버/워크스테이션</span>
+                <span class="lang-en">Servers &amp; Workstations</span>
+              </a>
+              <a href="coming-soon.html">
+                <span class="lang-ko">스토리지</span>
+                <span class="lang-en">Storage</span>
               </a>
             </div>
-            <div class="mega-industry-item">
+          </div>
+        </li>
+
+        <!-- 산업/고객 -->
+        <li class="mobile-nav__item">
+          <button
+            class="mobile-nav__toggle"
+            type="button"
+            data-mobile-menu="industry"
+            aria-expanded="false"
+          >
+            <span>
+              <span class="lang-ko">산업/고객</span>
+              <span class="lang-en">Industries</span>
+            </span>
+            <span class="mobile-arrow">▼</span>
+          </button>
+          <div class="mobile-submenu" data-mobile-panel="industry">
+            <div class="mobile-submenu-inner">
+              <a href="industry.html">
+                <span class="lang-ko">리테일 · 쇼핑몰</span>
+                <span class="lang-en">Retail &amp; Shopping Malls</span>
+              </a>
+              <a href="industry.html">
+                <span class="lang-ko">브랜드 플래그십 스토어</span>
+                <span class="lang-en">Brand Flagship Stores</span>
+              </a>
               <a href="industry.html">
                 <span class="lang-ko">기업 캠퍼스</span>
-                <span class="lang-en">Corporate Campus</span>
+                <span class="lang-en">Corporate Campuses</span>
               </a>
-            </div>
-            <div class="mega-industry-item">
               <a href="industry.html">
-                <span class="lang-ko">제조/물류</span>
-                <span class="lang-en">Manufacturing &amp; Logistics</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">데이터센터/창고</span>
-                <span class="lang-en">Data Center &amp; Warehouse</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">건설/산업안전</span>
-                <span class="lang-en">Construction &amp; Safety</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">헬스케어/의료/병원</span>
-                <span class="lang-en">Healthcare &amp; Hospitals</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">서비스/호텔</span>
-                <span class="lang-en">Hospitality &amp; Services</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">다중이용시설</span>
-                <span class="lang-en">Public Venues</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">스마트 도시</span>
-                <span class="lang-en">Smart City</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">공공 안전</span>
-                <span class="lang-en">Public Safety</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">에너지/유틸리티</span>
-                <span class="lang-en">Energy &amp; Utilities</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">운송-허브/공항</span>
-                <span class="lang-en">Transportation Hubs &amp; Airports</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">교육 캠퍼스</span>
-                <span class="lang-en">Education Campus</span>
-              </a>
-            </div>
-            <div class="mega-industry-item">
-              <a href="industry.html">
-                <span class="lang-ko">게이밍/카지노</span>
-                <span class="lang-en">Gaming &amp; Casinos</span>
+                <span class="lang-ko">연구소 &amp; 데이터센터</span>
+                <span class="lang-en">Labs &amp; Data Centers</span>
               </a>
             </div>
           </div>
+        </li>
+
+        <!-- 리소스 -->
+        <li class="mobile-nav__item">
+          <button
+            class="mobile-nav__toggle"
+            type="button"
+            data-mobile-menu="resources"
+            aria-expanded="false"
+          >
+            <span>
+              <span class="lang-ko">리소스</span>
+              <span class="lang-en">Resources</span>
+            </span>
+            <span class="mobile-arrow">▼</span>
+          </button>
+          <div class="mobile-submenu" data-mobile-panel="resources">
+            <div class="mobile-submenu-inner">
+              <a href="resources.html">
+                <span class="lang-ko">FAQ / 자주 묻는 질문</span>
+                <span class="lang-en">FAQ</span>
+              </a>
+              <a href="resources.html">
+                <span class="lang-ko">자료실</span>
+                <span class="lang-en">Downloads</span>
+              </a>
+              <a href="resources.html">
+                <span class="lang-ko">교육 및 웨비나</span>
+                <span class="lang-en">Trainings &amp; Webinars</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- 회사 -->
+        <li class="mobile-nav__item">
+          <button
+            class="mobile-nav__toggle"
+            type="button"
+            data-mobile-menu="company"
+            aria-expanded="false"
+          >
+            <span>
+              <span class="lang-ko">회사</span>
+              <span class="lang-en">Company</span>
+            </span>
+            <span class="mobile-arrow">▼</span>
+          </button>
+          <div class="mobile-submenu" data-mobile-panel="company">
+            <div class="mobile-submenu-inner">
+              <a href="vision.html">
+                <span class="lang-ko">비전</span>
+                <span class="lang-en">Vision</span>
+              </a>
+              <a href="greeting.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en">Greeting</span>
+              </a>
+              <a href="contact.html">
+                <span class="lang-ko">연락처</span>
+                <span class="lang-en">Contact</span>
+              </a>
+              <a href="inquiry.html">
+                <span class="lang-ko">문의</span>
+                <span class="lang-en">Inquiry</span>
+              </a>
+              <a href="events.html">
+                <span class="lang-ko">이벤트</span>
+                <span class="lang-en">Events</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mobile-nav__extra">
+        <a href="partner-portal.html" class="mobile-portal-link">
+          <span>
+            <span class="lang-ko">파트너 포털</span>
+            <span class="lang-en">Partner Portal</span>
+          </span>
+          <span>→</span>
+        </a>
+
+        <div class="mobile-lang-group">
+          <button type="button" data-mobile-lang="ko">KOR</button>
+          <button type="button" data-mobile-lang="en">ENG</button>
         </div>
 
-        <!-- Resources panel -->
-        <div class="mega-menu__panel" data-menu-panel="resources">
-          <div class="mega-menu__title">
-            <span class="lang-ko">리소스</span>
-            <span class="lang-en">Resources</span>
-          </div>
-          <div class="mega-menu__subtitle">
-            <span class="lang-ko">
-              제품 및 기술 이해를 돕는 FAQ, 문서, 교육 자료를 순차적으로 공개할 예정입니다.
-            </span>
-            <span class="lang-en">
-              We will gradually publish FAQs, documents and training materials to support
-              your understanding.
-            </span>
-          </div>
-          <div class="mega-simple-list">
-            <a href="coming-soon.html">
-              <span class="lang-ko">FAQ</span>
-              <span class="lang-en">FAQ</span>
-            </a>
-            <a href="coming-soon.html">
-              <span class="lang-ko">문서</span>
-              <span class="lang-en">Documents</span>
-            </a>
-            <a href="coming-soon.html">
-              <span class="lang-ko">교육</span>
-              <span class="lang-en">Training</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Partners panel -->
-        <div class="mega-menu__panel" data-menu-panel="partners">
-          <div class="mega-menu__title">
-            <span class="lang-ko">파트너</span>
-            <span class="lang-en">Partners</span>
-          </div>
-          <div class="mega-menu__subtitle">
-            <span class="lang-ko">
-              국내 채널 파트너와 함께 성장할 수 있는 파트너 프로그램을 준비하고 있습니다.
-            </span>
-            <span class="lang-en">
-              We are preparing partner programs that enable mutual growth with local
-              channel partners.
-            </span>
-          </div>
-          <div class="mega-simple-list">
-            <a href="coming-soon.html">
-              <span class="lang-ko">채널 파트너 정책</span>
-              <span class="lang-en">Channel Partner Policy</span>
-            </a>
-            <a href="coming-soon.html">
-              <span class="lang-ko">파트너 프로그램</span>
-              <span class="lang-en">Partner Program</span>
-            </a>
-            <a href="coming-soon.html">
-              <span class="lang-ko">파트너 신청</span>
-              <span class="lang-en">Become a Partner</span>
-            </a>
-            <a href="coming-soon.html">
-              <span class="lang-ko">파트너 포털 계정 신청</span>
-              <span class="lang-en">Partner Portal Account Request</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Company panel -->
-        <div class="mega-menu__panel" data-menu-panel="company">
-          <div class="mega-menu__title">
-            <span class="lang-ko">회사</span>
-            <span class="lang-en">Company</span>
-          </div>
-          <div class="mega-menu__subtitle">
-            <span class="lang-ko">
-              퓨텍솔루션즈는 AI 기반 영상분석과 IT 인프라 전문 역량으로 파트너와 고객의
-              비즈니스를 지원합니다.
-            </span>
-            <span class="lang-en">
-              Futec Solutions supports partners and customers with expertise in AI-based
-              video analytics and IT infrastructure.
-            </span>
-          </div>
-          <div class="mega-simple-list">
-            <a href="vision.html">
-              <span class="lang-ko">비전</span>
-              <span class="lang-en">Vision</span>
-            </a>
-            <a href="greeting.html">
-              <span class="lang-ko">인사말</span>
-              <span class="lang-en">Greeting</span>
-            </a>
-            <a href="contact.html">
-              <span class="lang-ko">연락처</span>
-              <span class="lang-en">Contact</span>
-            </a>
-            <a href="inquiry.html">
-              <span class="lang-ko">문의</span>
-              <span class="lang-en">Inquiry</span>
-            </a>
-            <a href="events.html">
-              <span class="lang-ko">이벤트</span>
-              <span class="lang-en">Events</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Search panel -->
-        <div class="mega-menu__panel mega-menu__panel--search" data-menu-panel="search">
-          <div class="mega-menu__title">
+        <div class="mobile-search-group">
+          <button type="button" data-mobile-search>
             <span class="lang-ko">검색</span>
             <span class="lang-en">Search</span>
-          </div>
-          <div class="mega-search-box">
-            <div class="mega-search-input-row">
-              <input
-                type="text"
-                placeholder="예: 리테일, 파트너, AI 영상분석"
-                aria-label="Search"
-              />
-              <button type="button">
-                <span class="lang-ko">검색</span>
-                <span class="lang-en">Search</span>
-              </button>
-            </div>
-            <div class="mega-search-hint">
-              <span class="lang-ko">
-                현재는 UI만 제공되며, 실제 검색 기능은 추후 업데이트될 예정입니다.
-              </span>
-              <span class="lang-en">
-                Currently only the UI is available; search functionality will be added
-                later.
-              </span>
-            </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>
-
-    <!-- 모바일 내비게이션 -->
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <div class="mobile-nav__inner">
-        <ul class="mobile-nav__list">
-          <!-- 제품 -->
-          <li class="mobile-nav__item">
-            <button
-              class="mobile-nav__toggle"
-              type="button"
-              data-mobile-menu="products"
-              aria-expanded="false"
-            >
-              <span>
-                <span class="lang-ko">제품</span>
-                <span class="lang-en">Products</span>
-              </span>
-              <span class="mobile-arrow">▼</span>
-            </button>
-            <div class="mobile-submenu" data-mobile-panel="products">
-              <div class="mobile-submenu-inner">
-                <a href="coming-soon.html">
-                  <span class="lang-ko">AI 영상분석 소프트웨어</span>
-                  <span class="lang-en">AI Video Analytics Software</span>
-                </a>
-                <a href="coming-soon.html">
-                  <span class="lang-ko">AI 영상분석 어플라이언스</span>
-                  <span class="lang-en">AI Video Analytics Appliances</span>
-                </a>
-                <a href="coming-soon.html">
-                  <span class="lang-ko">네트워킹</span>
-                  <span class="lang-en">Networking</span>
-                </a>
-                <a href="coming-soon.html">
-                  <span class="lang-ko">서버/워크스테이션</span>
-                  <span class="lang-en">Servers &amp; Workstations</span>
-                </a>
-                <a href="coming-soon.html">
-                  <span class="lang-ko">스토리지</span>
-                  <span class="lang-en">Storage</span>
-                </a>
-              </div>
-            </div>
-          </li>
-
-          <!-- 산업 -->
-          <li class="mobile-nav__item">
-            <button
-              class="mobile-nav__toggle"
-              type="button"
-              data-mobile-menu="industry"
-              aria-expanded="false"
-            >
-              <span>
-                <span class="lang-ko">산업</span>
-                <span class="lang-en">Industry</span>
-              </span>
-              <span class="mobile-arrow">▼</span>
-            </button>
-            <div class="mobile-submenu" data-mobile-panel="industry">
-              <div class="mobile-submenu-inner">
-                <a href="industry.html">
-                  <span class="lang-ko">스마트시티/스마트폴</span>
-                  <span class="lang-en">Smart City &amp; Smart Poles</span>
-                </a>
-                <a href="industry.html">
-                  <span class="lang-ko">교통/교차로</span>
-                  <span class="lang-en">Traffic &amp; Intersections</span>
-                </a>
-                <a href="industry.html">
-                  <span class="lang-ko">물류/창고</span>
-                  <span class="lang-en">Logistics &amp; Warehousing</span>
-                </a>
-                <a href="industry.html">
-                  <span class="lang-ko">교육 캠퍼스</span>
-                  <span class="lang-en">Education Campus</span>
-                </a>
-                <a href="industry.html">
-                  <span class="lang-ko">병원/의료시설</span>
-                  <span class="lang-en">Hospitals &amp; Healthcare</span>
-                </a>
-                <a href="industry.html">
-                  <span class="lang-ko">제조/플랜트</span>
-                  <span class="lang-en">Manufacturing &amp; Plants</span>
-                </a>
-              </div>
-            </div>
-          </li>
-
-          <!-- 리소스 -->
-          <li class="mobile-nav__item">
-            <button
-              class="mobile-nav__toggle"
-              type="button"
-              data-mobile-menu="resources"
-              aria-expanded="false"
-            >
-              <span>
-                <span class="lang-ko">리소스</span>
-                <span class="lang-en">Resources</span>
-              </span>
-              <span class="mobile-arrow">▼</span>
-            </button>
-            <div class="mobile-submenu" data-mobile-panel="resources">
-              <div class="mobile-submenu-inner">
-                <a href="resources.html">
-                  <span class="lang-ko">FAQ / 자주 묻는 질문</span>
-                  <span class="lang-en">FAQ</span>
-                </a>
-                <a href="resources.html">
-                  <span class="lang-ko">자료실</span>
-                  <span class="lang-en">Downloads</span>
-                </a>
-                <a href="resources.html">
-                  <span class="lang-ko">교육 및 웨비나</span>
-                  <span class="lang-en">Trainings &amp; Webinars</span>
-                </a>
-              </div>
-            </div>
-          </li>
-
-          <!-- 회사 -->
-          <li class="mobile-nav__item">
-            <button
-              class="mobile-nav__toggle"
-              type="button"
-              data-mobile-menu="company"
-              aria-expanded="false"
-            >
-              <span>
-                <span class="lang-ko">회사</span>
-                <span class="lang-en">Company</span>
-              </span>
-              <span class="mobile-arrow">▼</span>
-            </button>
-            <div class="mobile-submenu" data-mobile-panel="company">
-              <div class="mobile-submenu-inner">
-                <a href="vision.html">
-                  <span class="lang-ko">Vision</span>
-                  <span class="lang-en">Vision</span>
-                </a>
-                <a href="greeting.html">
-                  <span class="lang-ko">인사말</span>
-                  <span class="lang-en">Greeting</span>
-                </a>
-                <a href="contact.html">
-                  <span class="lang-ko">연락처</span>
-                  <span class="lang-en">Contact</span>
-                </a>
-                <a href="inquiry.html">
-                  <span class="lang-ko">문의</span>
-                  <span class="lang-en">Inquiry</span>
-                </a>
-                <a href="events.html">
-                  <span class="lang-ko">이벤트</span>
-                  <span class="lang-en">Events</span>
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-        <div class="mobile-nav__extra">
-          <a href="partner-portal.html" class="partner-portal-btn">
-            <span class="lang-ko">파트너 포털</span>
-            <span class="lang-en">Partner Portal</span>
-          </a>
-
-          <div class="mobile-lang-group">
-            <button type="button" data-mobile-lang="ko">KOR</button>
-            <button type="button" data-mobile-lang="en">ENG</button>
-          </div>
-
-          <div class="mobile-search-group">
-            <button type="button" data-mobile-search>
-              <span class="lang-ko">검색</span>
-              <span class="lang-en">Search</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-   </li>
-
-          <li class="mobile-nav__item">
-            <button
-              class="mobile-nav__toggle"
-              type="butto
+  </nav>
+</header>
