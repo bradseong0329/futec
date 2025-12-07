@@ -9,6 +9,22 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- index.html 전용 모바일 레이아웃 보정 -->
+    <style>
+      @media (max-width: 768px) {
+        .hero__inner {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero__visual {
+          justify-self: stretch;
+          margin-top: 24px;
+        }
+      }
+    </style>
+
+
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -63,6 +79,9 @@
           </div>
 
           <div class="hero__visual">
+
+
+
 
 
 <div class="hero-visual-card">
